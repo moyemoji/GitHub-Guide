@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>GitHub使用指南</title>
+    <style>
+        h1{
+            position: relative;
+            left:50%;
+            margin-left:-85px;
+            font-weight: bold;
+        }
+        fieldset {
+            position: relative;
+            margin: 20px 20px;
+        }
+        
+        legend {
+            font-family: '黑体';
+            font-size: 20px;
+            font-weight: bold;
+        }
+        
+        ul,
+        li {
+            list-style: none;
+        }
+        
+        li {
+            margin: 8px;
+        }
+        
+        a {
+            text-decoration: none;
+            color:red;
+        }
+        
+        .content {
+            position: relative;
+            margin-left: 30px;
+        }
+        
+        h4 {
+            color: crimson;
+            font-weight: bold;
+        }
+        
+        p {
+            line-height: 25px;
+            color: dimgray;
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1>GitHub使用指南</h1>
+    <fieldset>
+        <legend>目录</legend>
+        <ul>
+            <li>个人编码</li>
+            <li>
+                <ul>
+                    <li><a href="#1">新建项目</a></li>
+                    <li><a href="#2">新建/修改文件</a></li>
+                    <li><a href="#3">保存变动/制作版本/发布至网页端</a></li>
+                </ul>
+            </li>
+            <li>团队协作</li>
+            <li>
+                <ul>
+                    <li><a href="#4">相关概念</a></li>
+                    <li><a href="#5">创建分支</a></li>
+                    <li><a href="#6">做新版本</a></li>
+                    <li><a href="#7">开启请求</a></li>
+                    <li><a href="#8">讨论/代码审核</a></li>
+                    <li><a href="#9">合并</a></li>
+                </ul>
+            </li>
+            <li>开源项目贡献</li>
+            <li>
+                <ul>
+                    <li><a href="#10">Fork</a></li>
+                </ul>
+            </li>
+            <li>其他</li>
+            <li>
+                <ul>
+                    <li><a href="#11">Issue</a></li>
+                    <li><a href="#12">GitHub Pages</a></li>
+                </ul>
+            </li>
+        </ul>
+    </fieldset>
+    <fieldset>
+        <legend>个人编码</legend>
+        <h4 id="1">新建项目</h4>
+        <div class="content">
+            <p><img src="images/new-project.png" /></p>
+            <p>新建项目有三种方式：Add、Create和Clone。Create方式将在本地创建一个新项目，创建完成后同步至网页端；Clone方式将网页端项目同步到本地，对齐修改完善。</p>
+        </div>
+        <h4 id="2">新建/修改文件</h4>
+        <h4 id="3">保存变动/制作版本/发布至网页端</h4>
+        <div class="content">
+            <p><img src="images/commit.png" /></p>
+            <p>项目变化时，GitHub DeskTop右上角会显示* uncommitted changes，点击它，选中需要制作版本（commit）的文件以及特定的代码行，输入版本描述Summary和Description，接着点击Commit to master，最后点击Publish发布。之后版本的修改也需要选中变化部分并填写版本描述，但最后一个步骤变为点击Sync同步即可。</p>
+            <p><img src="images/undo.png" /></p>
+            <p>如果不满意自己刚制作的最新版本，可以单击右上角齿轮符号，接着点击Undo most recent commit撤销最新发布的版本。</p>
+            <p><img src="images/revert.png" /></p>
+            <p>版本制作完成以后，也可以通过点击Revert撤销该版本。无论完成哪种操作，都要注意同步到网页端。</p>
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>团队协作</legend>
+        <h4 id="4">相关概念</h4>
+        <div class="content">
+            <p>GitHub工作流：创建分支（Branch）——做新版本（Commit）——开启请求（Pull Request）——讨论/代码审核——合并（Merge/Update）</p>
+        </div>
+        <h4 id="5">创建分支</h4>
+        <div class="content">
+            <p><img src="images/new-branch.png" /></p>
+            <p>创建分支的目的在于开辟一条独立的编码流以测试新功能，分支将会继承创建分支前Master的最后一个版本。点击分支符号，输入分支名即可创建。</p>
+        </div>
+        <h4 id="6">做新版本</h4>
+        <div class="content">
+            <p>新版本的制作和个人编码时的版本制作一致，不过应当确保做版本时所在的分支为希望在的分支。</p>
+        </div>
+        <h4 id="7">开启请求</h4>
+        <div class="content">
+            <P><img src="images/pull-request.png" /></P>
+            <p>Pull Ruquest的目的在于将修改的内容与队友交流，并对其进行反复修改完善。在需要开启请求的分支下点击Pull Request，输入相应的修改内容、存在的疑问等。注意在项目的Setting中给队友Collavorators赋予写权利。</p>
+        </div>
+        <h4 id="8">讨论/代码审核</h4>
+        <h4 id="9">合并</h4>
+        <div class="content">
+            <P><img src="images/merge.png" /></P>
+            <p>可以在网页端的Pull Request中讨论修改的内容，并及时做出新版本。当确认修改的内容完善后，可将Master合并到该分支上，最后关闭该Pull Request。该界面右侧中的Assignees可以选中该项目的负责人。</p>
+            <p>讨论的时候，可以借助MarkDown编写漂亮的格式；可以@相应的队友；可以选中相应的问题内容按快捷键R对其回复，指定回复也可以写成 > **** 的格式；可以点击评论时间后复制网址，填入讨论框后该网址会自动转化成Pull Request的编号如#2。</p>
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>开源项目贡献</legend>
+        <h4 id="10">Fork</h4>
+        <div class="content">
+            <P><img src="images/fork.png" /></P>
+            <p>如果遇到好的项目想加入其中，因为自己不是该项目成员，没有写权限，可以Fork它，将其内容同步到自己的账号中，修改内容后Pull Request。修改的过程与修改自己的项目过程无异。Graphs中的NetWork可以查看项目贡献者的贡献情况。</p>
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>其他</legend>
+        <h4 id="11">Issue</h4>
+        <div class="content">
+            <P>对于那些自己有想法但是没有编码实现的部分，采用Issue进行标记。</P>
+        </div>
+        <h4 id="12">GitHub Pages</h4>
+        <div class="content">
+            <P>GitHub提供了免费的主机服务，如果要把自己的项目不知在其主机下，则需要建立一个gh-pages的分支。项目主页地址为username.github.io/project-name</P>
+        </div>
+    </fieldset>
+</body>
+
+</html>
